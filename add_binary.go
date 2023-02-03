@@ -1,4 +1,4 @@
-package Digibin
+package digiutils
 
 import "strconv"
 
