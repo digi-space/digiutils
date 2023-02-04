@@ -1,30 +1,26 @@
 package digiutils
 
-import "strconv"
-
-func AddBinary(a string, b string) (result string) {
+// AddBinary takes two parameters a and b and returns
+// their sum as a binary string.
+func AddBinary(a string, b string) string {
 	n, m := len(a), len(b)
 	carry := 0
-	res := []int{}
+	res := []byte{}
 	for i, j := n-1, m-1; i >= 0 || j >= 0; i, j = i-1, j-1 {
 		x := 0
 		if i >= 0 {
-			x, _ = strconv.Atoi(string(a[i]))
+			x = int(a[i] - '0')
 		}
 		y := 0
 		if j >= 0 {
-			y, _ = strconv.Atoi(string(b[j]))
+			y = int(b[j] - '0')
 		}
 		sum := x + y + carry
-		res = append([]int{sum % 2}, res...)
+		res = append([]byte{byte(sum%2) + '0'}, res...)
 		carry = sum / 2
 	}
 	if carry > 0 {
-		res = append([]int{1}, res...)
+		res = append([]byte{'1'}, res...)
 	}
-
-	for _, val := range res {
-		result += strconv.Itoa(val)
-	}
-	return
+	return string(res)
 }
