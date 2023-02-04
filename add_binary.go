@@ -2,7 +2,7 @@ package digiutils
 
 // AddBinary takes two parameters a and b and returns
 // their sum as a binary string.
-func AddBinary(a string, b string) string {
+func AddBinary(a, b string) string {
 	n, m := len(a), len(b)
 	carry := 0
 	res := []byte{}
