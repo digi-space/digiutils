@@ -34,12 +34,12 @@ func main() {
 
 Hanif Naufal – [@Digisata](https://twitter.com/Digisata) – [hnaufal123@gmail.com](mailto:hnaufal123@gmail.com)
 
-Distributed under the MIT license. See ``LICENSE`` for more information.
+Distributed under the MIT license. See [LICENSE](LICENSE.md) for more information.
 
 ## Contributing
 
 1. Fork this repository.
-2. Create your own branch (`git checkout -b foo/bar`).
+2. Create your own branch (`git checkout -b fooBar`).
 3. Commit your changes (`git commit -am 'Add some fooBar'`).
 4. Push to the branch (`git push origin feature/fooBar`).
 5. Create your awesome Pull Request.
