@@ -1,7 +1,9 @@
 package digiutils
 
 import (
+	"math"
 	"regexp"
+	"sort"
 	"strings"
 )
 
@@ -48,7 +50,7 @@ func IsPalindrome(s string) bool {
 }
 
 // RomanToInt convert roman numeral to int, it returns
-// 0 if s is not a valid roman numeral
+// 0 if s is not a valid roman numeral.
 func RomanToInt(s string) (res int) {
 	roman := map[byte]int{
 		'I': 1,
@@ -78,4 +80,36 @@ func RomanToInt(s string) (res int) {
 		i++
 	}
 	return
+}
+
+// ContainsDuplicate finds an unduplicated number,
+// if there is no duplication it will return false.
+func ContainsDuplicate(nums []int) bool {
+	sort.Ints(nums)
+
+	for i := 0; i <= len(nums)-2; i++ {
+		if nums[i] == nums[i+1] {
+			return true
+		}
+	}
+
+	return false
+}
+
+
+// IsPowerOfTwo returns true if n is a power of two.
+// Otherwise, return false.
+func IsPowerOfTwo(n int) bool {
+	square := 0
+	res := 0.0
+
+	for int(res) <= n {
+		res = math.Pow(2.0, float64(square))
+		if int(res) == n {
+			return true
+		}
+		square++
+	}
+
+	return false
 }
