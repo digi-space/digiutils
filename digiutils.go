@@ -96,7 +96,6 @@ func ContainsDuplicate(nums []int) bool {
 	return false
 }
 
-
 // IsPowerOfTwo returns true if n is a power of two.
 // Otherwise, return false.
 func IsPowerOfTwo(n int) bool {
@@ -112,4 +111,19 @@ func IsPowerOfTwo(n int) bool {
 	}
 
 	return false
+}
+
+// AddDigits  repeatedly add all its digits
+// until the result has only one digit, and return it.
+func AddDigits(num int) int {
+	if num < 10 {
+		return num
+	}
+
+	res := num % 9
+	if res == 0 {
+		return 9
+	}
+
+	return res
 }

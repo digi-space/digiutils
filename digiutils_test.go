@@ -56,3 +56,14 @@ func TestIsPowerOfTwo(t *testing.T) {
 		}
 	}
 }
+
+func TestAddDigits(t *testing.T) {
+	got := []int{AddDigits(38), AddDigits(0)}
+	expected := []int{2, 0}
+
+	for i := 0; i < len(got); i++ {
+		if got[i] != expected[i] {
+			t.Errorf("got %d, expected %d", got[i], expected[i])
+		}
+	}
+}
