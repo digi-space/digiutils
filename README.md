@@ -41,5 +41,5 @@ Distributed under the MIT license. See [LICENSE](LICENSE.md) for more informatio
 1. Fork this repository.
 2. Create your own branch (`git checkout -b fooBar`).
 3. Commit your changes (`git commit -am 'Add some fooBar'`).
-4. Push to the branch (`git push origin feature/fooBar`).
+4. Push to the branch (`git push origin fooBar`).
 5. Create your awesome Pull Request.
