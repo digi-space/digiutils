@@ -67,3 +67,36 @@ func TestAddDigits(t *testing.T) {
 		}
 	}
 }
+
+func TestGetMiddle(t *testing.T) {
+	got := []int{GetMiddle([]int{1, 2, 3}), GetMiddle([]int{5, 4, 8, 9})}
+	expected := []int{1, -1}
+
+	for i := 0; i < len(got); i++ {
+		if got[i] != expected[i] {
+			t.Errorf("got %d, expected %d", got[i], expected[i])
+		}
+	}
+}
+
+func TestRoundToNext5(t *testing.T) {
+	got := []int{RoundToNext5(0), RoundToNext5(3), RoundToNext5(21)}
+	expected := []int{0, 5, 25}
+
+	for i := 0; i < len(got); i++ {
+		if got[i] != expected[i] {
+			t.Errorf("got %d, expected %d", got[i], expected[i])
+		}
+	}
+}
+
+func TestIsTriangle(t *testing.T) {
+	got := []bool{IsTriangle(5, 1, 2), IsTriangle(1, 2, 5), IsTriangle(4, 2, 3)}
+	expected := []bool{false, false, true}
+
+	for i := 0; i < len(got); i++ {
+		if got[i] != expected[i] {
+			t.Errorf("got %t, expected %t", got[i], expected[i])
+		}
+	}
+}

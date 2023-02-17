@@ -147,3 +147,21 @@ func GetMiddle(array []int) int {
 
 	return 0
 }
+
+// RoundToNext5 returns the next nearest multiple of 5
+func RoundToNext5(n int) int {
+	for {
+		if n%5 == 0 {
+			return n
+		}
+		n++
+	}
+}
+
+// IsTriangle returns true if a triangle can be built
+// with the sides of a given length and false in any other case
+func IsTriangle(a, b, c int) bool {
+	sides := []int{a, b, c}
+	sort.Ints(sides)
+	return sides[0]+sides[1] > sides[2]
+}
