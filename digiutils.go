@@ -127,3 +127,23 @@ func AddDigits(num int) int {
 
 	return res
 }
+
+// GetMiddle returns index of middle value of a slice
+// this take a slice with odd length
+func GetMiddle(array []int) int {
+	if len(array)%2 == 0 {
+		return -1
+	}
+
+	c := make([]int, len(array))
+	copy(c, array)
+	sort.Ints(c)
+
+	for i, v := range array {
+		if v == c[len(c)/2] {
+			return i
+		}
+	}
+
+	return 0
+}
