@@ -111,3 +111,14 @@ func TestTwoOldestAges(t *testing.T) {
 		}
 	}
 }
+
+func TestGetCount(t *testing.T) {
+	got := []int{GetCount("abracadabra")}
+	expected := []int{5}
+
+	for i := 0; i < len(got); i++ {
+		if got[i] != expected[i] {
+			t.Errorf("got %d, expected %d", got[i], expected[i])
+		}
+	}
+}
