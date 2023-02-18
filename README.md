@@ -9,7 +9,7 @@ This collection is intended to document 📝 what I already solved from the codi
 ## Installation
 
 ```shell
-go get github.com/Digisata/digiutils
+go get github.com/digi-space/digiutils
 ```
 
 ## Usage
@@ -21,7 +21,7 @@ package main
 
 import (
  "fmt"
- "github.com/Digisata/digiutils"
+ "github.com/digi-space/digiutils"
 )
 
 func main() {
@@ -32,7 +32,7 @@ func main() {
 
 ## Meta
 
-Hanif Naufal – [@Digisata](https://twitter.com/Digisata) – [hnaufal123@gmail.com](mailto:hnaufal123@gmail.com)
+Digi Space – [@Digisata](https://twitter.com/Digisata) – [hnaufal123@gmail.com](mailto:hnaufal123@gmail.com)
 
 Distributed under the MIT license. See [LICENSE](LICENSE.md) for more information.
 

@@ -1,3 +1,3 @@
-module github.com/Digisata/digiutils
+module github.com/digi-space/digiutils
 
 go 1.19
