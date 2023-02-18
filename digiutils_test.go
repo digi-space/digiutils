@@ -100,3 +100,14 @@ func TestIsTriangle(t *testing.T) {
 		}
 	}
 }
+
+func TestTwoOldestAges(t *testing.T) {
+	got := [][2]int{TwoOldestAges([]int{6, 5, 83, 5, 3, 18}), TwoOldestAges([]int{1, 5, 87, 45, 8, 8})}
+	expected := [][2]int{{18, 83}, {45, 87}}
+
+	for i := 0; i < len(got); i++ {
+		if got[i] != expected[i] {
+			t.Errorf("got %v, expected %v", got[i], expected[i])
+		}
+	}
+}
