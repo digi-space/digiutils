@@ -165,3 +165,10 @@ func IsTriangle(a, b, c int) bool {
 	sort.Ints(sides)
 	return sides[0]+sides[1] > sides[2]
 }
+
+// TwoOldestAges returns an array with length 2 that
+// consists of two oldest ages
+func TwoOldestAges(ages []int) [2]int {
+	sort.Ints(ages)
+	return [2]int{ages[len(ages)-2], ages[len(ages)-1]}
+}
