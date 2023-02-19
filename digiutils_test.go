@@ -122,3 +122,14 @@ func TestGetCount(t *testing.T) {
 		}
 	}
 }
+
+func TestStringEndWith(t *testing.T) {
+	got := []bool{StringEndWith("", ""), StringEndWith(" ", ""), StringEndWith("a", "z")}
+	expected := []bool{true, true, false}
+
+	for i := 0; i < len(got); i++ {
+		if got[i] != expected[i] {
+			t.Errorf("got %t, expected %t", got[i], expected[i])
+		}
+	}
+}

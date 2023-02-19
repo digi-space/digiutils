@@ -191,3 +191,14 @@ func GetCount(str string) (count int) {
 	}
 	return count
 }
+
+// StringEndWith returns true if the first argument(string)
+// passed in ends with the 2nd argument (also a string).
+func StringEndWith(str, ending string) bool {
+	str = strings.Trim(str, " ")
+	ending = strings.Trim(ending, " ")
+	if len(str) < len(ending) {
+		return false
+	}
+	return str[len(str)-len(ending):] == ending
+}
