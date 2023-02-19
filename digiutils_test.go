@@ -111,3 +111,25 @@ func TestTwoOldestAges(t *testing.T) {
 		}
 	}
 }
+
+func TestGetCount(t *testing.T) {
+	got := []int{GetCount("abracadabra")}
+	expected := []int{5}
+
+	for i := 0; i < len(got); i++ {
+		if got[i] != expected[i] {
+			t.Errorf("got %d, expected %d", got[i], expected[i])
+		}
+	}
+}
+
+func TestStringEndWith(t *testing.T) {
+	got := []bool{StringEndWith("", ""), StringEndWith(" ", ""), StringEndWith("a", "z")}
+	expected := []bool{true, true, false}
+
+	for i := 0; i < len(got); i++ {
+		if got[i] != expected[i] {
+			t.Errorf("got %t, expected %t", got[i], expected[i])
+		}
+	}
+}

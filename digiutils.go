@@ -129,7 +129,7 @@ func AddDigits(num int) int {
 }
 
 // GetMiddle returns index of middle value of a slice
-// this take a slice with odd length
+// this take a slice with odd length.
 func GetMiddle(array []int) int {
 	if len(array)%2 == 0 {
 		return -1
@@ -148,7 +148,7 @@ func GetMiddle(array []int) int {
 	return 0
 }
 
-// RoundToNext5 returns the next nearest multiple of 5
+// RoundToNext5 returns the next nearest multiple of 5.
 func RoundToNext5(n int) int {
 	for {
 		if n%5 == 0 {
@@ -159,7 +159,7 @@ func RoundToNext5(n int) int {
 }
 
 // IsTriangle returns true if a triangle can be built
-// with the sides of a given length and false in any other case
+// with the sides of a given length and false in any other case.
 func IsTriangle(a, b, c int) bool {
 	sides := []int{a, b, c}
 	sort.Ints(sides)
@@ -167,8 +167,38 @@ func IsTriangle(a, b, c int) bool {
 }
 
 // TwoOldestAges returns an array with length 2 that
-// consists of two oldest ages
+// consists of two oldest ages.
 func TwoOldestAges(ages []int) [2]int {
 	sort.Ints(ages)
 	return [2]int{ages[len(ages)-2], ages[len(ages)-1]}
+}
+
+// GetCount returns the number (count) of vowels in
+// the given string.
+func GetCount(str string) (count int) {
+	vowel := map[string]bool{
+		"a": true,
+		"i": true,
+		"u": true,
+		"e": true,
+		"o": true,
+	}
+
+	for _, val := range str {
+		if _, ok := vowel[string(val)]; ok {
+			count++
+		}
+	}
+	return count
+}
+
+// StringEndWith returns true if the first argument(string)
+// passed in ends with the 2nd argument (also a string).
+func StringEndWith(str, ending string) bool {
+	str = strings.Trim(str, " ")
+	ending = strings.Trim(ending, " ")
+	if len(str) < len(ending) {
+		return false
+	}
+	return str[len(str)-len(ending):] == ending
 }
